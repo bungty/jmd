@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | JMD Consultancy - Find Jobs Across India</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(135deg, #eef4ff 0%, #ffffff 100%);
+      padding: 3.5rem 0;
+      border-bottom: 1px solid rgba(10,44,78,0.05);
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.5rem;
+    }
+    .job-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem;
+      box-shadow: 0 10px 20px -8px rgba(0,0,0,0.04);
+      border: 1px solid #edf2f9;
+      transition: all 0.2s;
+      height: 100%;
+    }
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -10px rgba(10,44,78,0.1);
+      border-color: #d0e0ff;
+    }
+    .job-badge {
+      background-color: #eef4ff;
+      color: #0a2c4e;
+      padding: 5px 14px;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .benefit-icon {
+      width: 50px;
+      height: 50px;
+      background: #e9f0fa;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.5rem;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+    }
+    .filter-btn {
+      border-radius: 40px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation (consistent) -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">JMD <span style="color:#1e4a76;">Consultancy</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCareers" aria-controls="navbarCareers" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCareers">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 9654576537
+        </span>
+        <a href="#" class="btn btn-primary rounded-pill px-4">Get Hiring Support</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <span class="badge bg-white text-dark mb-3 px-3 py-2 rounded-pill border"><i class="fas fa-briefcase me-2 text-primary"></i>Careers at JMD</span>
+        <h1 class="display-5 fw-bold section-title">Build Your Career With <br>Top Companies Across India</h1>
+        <p class="lead mt-3" style="color: #2a4b6e;">Explore verified job opportunities, fast hiring process, and free placement support with JMD Consultancy.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="#openings" class="btn btn-primary rounded-pill px-4 py-2">View Openings <i class="fas fa-arrow-down ms-2"></i></a>
+          <a href="#apply" class="btn btn-outline-primary rounded-pill px-4 py-2">Submit Resume</a>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block text-center">
+        <img src="https://placehold.co/500x400/eef4ff/0a2c4e?text=Career+Opportunities" class="img-fluid rounded-4" alt="Career illustration">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why apply with JMD (features) -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Apply With JMD Consultancy?</h2>
+      <p class="text-secondary">We connect you with verified employers and ensure a smooth hiring experience.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-3">
+          <div class="benefit-icon mx-auto mb-3"><i class="fas fa-globe-asia"></i></div>
+          <h6 class="fw-bold">Pan India Job Opportunities</h6>
+          <p class="small text-secondary">Access openings in metros, tier-2 & tier-3 cities across multiple industries.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-3">
+          <div class="benefit-icon mx-auto mb-3"><i class="fas fa-bolt"></i></div>
+          <h6 class="fw-bold">Fast Hiring Process</h6>
+          <p class="small text-secondary">Quick screening, interview scheduling, and offer management.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-3">
+          <div class="benefit-icon mx-auto mb-3"><i class="fas fa-shield-alt"></i></div>
+          <h6 class="fw-bold">Verified Companies</h6>
+          <p class="small text-secondary">We partner only with trusted organizations, ensuring authenticity.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center p-3">
+          <div class="benefit-icon mx-auto mb-3"><i class="fas fa-hand-holding-heart"></i></div>
+          <h6 class="fw-bold">Free Placement Support</h6>
+          <p class="small text-secondary">No charges to candidates — our services are completely free for job seekers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Current Job Openings (with filters mock) -->
+<section id="openings" class="py-5 bg-light">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+      <h2 class="section-title mb-3 mb-md-0">Current Job Openings</h2>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary filter-btn active">All</button>
+        <button class="btn btn-outline-secondary filter-btn">IT</button>
+        <button class="btn btn-outline-secondary filter-btn">BPO</button>
+        <button class="btn btn-outline-secondary filter-btn">Sales</button>
+        <button class="btn btn-outline-secondary filter-btn">HR</button>
+      </div>
+    </div>
+    <div class="row g-4">
+      <!-- Job 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> IT Services</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Full-time</span>
+          </div>
+          <h5 class="fw-bold">Frontend Developer</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Bangalore / Pune / Remote</p>
+          <p class="small mb-3">React, Angular, Vue — 1-4 years experience.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹4-8 LPA</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> BPO / KPO</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Full-time</span>
+          </div>
+          <h5 class="fw-bold">Customer Support Executive</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Delhi NCR / Mumbai</p>
+          <p class="small mb-3">Voice process, excellent communication, rotational shifts.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹2.5-4 LPA</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> FMCG / Retail</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Full-time</span>
+          </div>
+          <h5 class="fw-bold">Field Sales Executive</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Chennai / Hyderabad</p>
+          <p class="small mb-3">B2B sales, field visits, 0-3 years experience.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹3-5 LPA + Incentives</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> IT Services</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Contract</span>
+          </div>
+          <h5 class="fw-bold">Backend Developer (Node.js)</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Hyderabad / Remote</p>
+          <p class="small mb-3">Node.js, MongoDB, 2+ years experience.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹6-12 LPA</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> HR Consulting</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Full-time</span>
+          </div>
+          <h5 class="fw-bold">HR Recruiter</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Noida / Gurgaon</p>
+          <p class="small mb-3">End-to-end recruitment, sourcing, 1-3 years exp.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹3-4.5 LPA</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Job 6 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="job-card">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <span class="job-badge"><i class="far fa-building me-1"></i> BPO</span>
+            <span class="text-secondary small"><i class="far fa-clock me-1"></i> Full-time</span>
+          </div>
+          <h5 class="fw-bold">Telecaller / Telesales</h5>
+          <p class="text-secondary small mb-2"><i class="fas fa-map-marker-alt me-1"></i> Kolkata / Bhubaneswar</p>
+          <p class="small mb-3">Outbound calling, lead generation, freshers welcome.</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="fw-medium" style="color:#0a2c4e;">₹1.8-2.8 LPA</span>
+            <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-outline-primary rounded-pill px-4">Load More Openings <i class="fas fa-sync-alt ms-2"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Application form / call to action (similar to home) -->
+<section id="apply" class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <h2 class="section-title">Don't see a suitable role?</h2>
+        <p class="mb-4">Submit your resume anyway — our recruiters will match you with upcoming opportunities.</p>
+        <div class="bg-white p-4 rounded-4 border">
+          <h6 class="fw-bold mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Get personalized job alerts</h6>
+          <h6 class="fw-bold mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Priority access to new openings</h6>
+          <h6 class="fw-bold mb-3"><i class="fas fa-check-circle text-primary me-2"></i>Free career guidance</h6>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="bg-white p-4 p-xl-5 rounded-4 border shadow-sm">
+          <h4 class="fw-bold mb-3">Quick Apply — Submit Your Resume</h4>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Full Name</label>
+                <input type="text" class="form-control" placeholder="Your name">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="9876543210">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Preferred Job Role</label>
+                <select class="form-select">
+                  <option selected disabled>Select</option>
+                  <option>Frontend Developer</option>
+                  <option>Backend Developer</option>
+                  <option>Customer Support</option>
+                  <option>Sales</option>
+                  <option>HR Recruiter</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Total Experience</label>
+                <input type="text" class="form-control" placeholder="e.g. 2 Years">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Preferred Location</label>
+                <input type="text" class="form-control" placeholder="City / Remote">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Upload Resume (PDF/DOC)</label>
+                <input class="form-control" type="file">
+                <div class="form-text">Max 5MB</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Cover Note (Optional)</label>
+                <textarea class="form-control" rows="2" placeholder="Tell us about your skills..."></textarea>
+              </div>
+              <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-primary rounded-pill px-5 py-2">Submit Application <i class="fas fa-paper-plane ms-2"></i></button>
+              </div>
+            </div>
+          </form>
+          <p class="small text-secondary mt-3 mb-0"><i class="fas fa-lock me-1"></i> Your information is secure. We never charge candidates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (consistent) -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 9654576537</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">End-to-End Hiring</a></li>
+          <li><a href="#">Bulk / Mass Hiring</a></li>
+          <li><a href="#">Temporary Staffing</a></li>
+          <li><a href="#">Payroll Outsourcing</a></li>
+          <li><a href="#">Pan India Recruitment</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

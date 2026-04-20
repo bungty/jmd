@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JMD Consultancy | HR Recruitment & Manpower Services</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .hero-section {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 3rem 0 4rem;
+    }
+    .badge-check {
+      color: #0a2c4e;
+      margin-right: 8px;
+    }
+    .service-card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03), 0 8px 10px -6px rgba(0,0,0,0.02);
+      transition: all 0.2s ease;
+      background-color: white;
+      height: 100%;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .why-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.5rem 1.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.15s;
+    }
+    .why-card i {
+      color: #0a2c4e;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .form-section {
+      background-color: #ffffff;
+      border-radius: 30px;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.06);
+      border: 1px solid #edf2f9;
+      padding: 2.5rem;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .job-tag {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">JMD <span style="color:#1e4a76;">Consultancy</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 9654576537
+        </span>
+        <a href="#" class="btn btn-primary rounded-pill px-4 py-2">Get Hiring Support</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="pe-lg-4">
+          <span class="badge bg-light text-dark mb-3 px-3 py-2 rounded-pill"><i class="fas fa-check-circle text-success me-1"></i> Pan India Recruitment</span>
+          <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Reliable HR Recruitment & <br>Manpower Services Across India</h1>
+          <p class="lead mt-3" style="color: #3a506c;">JMD Consultancy delivers professional, scalable, and result-driven recruitment, staffing, payroll outsourcing, and manpower solutions for organizations nationwide.</p>
+          <div class="d-flex flex-wrap gap-2 mt-4 mb-4">
+            <span class="job-tag"><i class="fas fa-check-circle me-1" style="color:#0a2c4e;"></i> End-to-End Hiring</span>
+            <span class="job-tag"><i class="fas fa-check-circle me-1" style="color:#0a2c4e;"></i> Pan India Recruitment</span>
+            <span class="job-tag"><i class="fas fa-check-circle me-1" style="color:#0a2c4e;"></i> Bulk & Mass Hiring</span>
+            <span class="job-tag"><i class="fas fa-check-circle me-1" style="color:#0a2c4e;"></i> Payroll Outsourcing</span>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#" class="btn btn-primary btn-lg rounded-pill px-4"><i class="fas fa-user-plus me-2"></i>Get Hiring Support</a>
+            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill px-4">View Services</a>
+          </div>
+          <div class="mt-4 d-flex align-items-center">
+            <div class="d-flex -space-x-2 me-3">
+              <i class="fas fa-user-circle fa-2x text-secondary"></i>
+              <i class="fas fa-user-circle fa-2x text-secondary ms-1"></i>
+              <i class="fas fa-user-circle fa-2x text-secondary ms-1"></i>
+            </div>
+            <span style="color:#0a2c4e;"><i class="fas fa-star text-warning"></i> Trusted by 200+ companies</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <img src="https://placehold.co/600x500/eef4ff/0a2c4e?text=JMD+Recruitment" class="img-fluid rounded-4" alt="HR recruitment illustration" style="box-shadow: 0 20px 30px -8px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About snippet + CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title">About JMD Consultancy</h2>
+        <p class="fw-medium mb-3" style="color:#1e4a76;">Trusted HR recruitment & manpower solutions — connecting right talent with right opportunities.</p>
+        <p style="color: #3f546d;">JMD Consultancy is a trusted HR recruitment and manpower solutions firm committed to simplifying hiring and creating meaningful careers. We support organizations across industries with end-to-end recruitment, staffing, payroll, and workforce solutions tailored to today’s competitive market.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Pan India Recruitment</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Professional HR Experts</li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Fast & Quality Hiring</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Client-Centric Approach</li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary rounded-pill mt-3 px-4">Contact Our Team <i class="fas fa-arrow-right ms-2"></i></a>
+      </div>
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <i class="fas fa-quote-left fa-2x mb-3" style="color:#0a2c4e; opacity:0.3;"></i>
+          <h5 class="fw-semibold">From startups to large enterprises, we deliver reliable, scalable, and cost-effective HR solutions.</h5>
+          <p class="mt-3 mb-0 fw-medium">— JMD Consultancy Team</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Grid (12 services) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our HR Recruitment & Manpower Services</h2>
+      <p class="section-subtitle">End-to-end HR, staffing, recruitment, payroll, and workforce solutions across India.</p>
+    </div>
+    <div class="row g-4">
+      <!-- service cards (12 items) -->
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-user-check"></i></div>
+          <h5 class="fw-bold">End-to-End Hiring</h5>
+          <p class="small text-secondary">Complete recruitment lifecycle management from requirement analysis to onboarding.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-file-invoice"></i></div>
+          <h5 class="fw-bold">HR Process Outsourcing</h5>
+          <p class="small text-secondary">Outsourcing daily HR operations so organizations can focus on core business.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-graduation-cap"></i></div>
+          <h5 class="fw-bold">Campus Hiring</h5>
+          <p class="small text-secondary">Structured hiring programs for fresh graduates and entry-level talent.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-users"></i></div>
+          <h5 class="fw-bold">Bulk / Mass Hiring</h5>
+          <p class="small text-secondary">Large-scale recruitment solutions for high-volume manpower needs.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-calendar-alt"></i></div>
+          <h5 class="fw-bold">Temporary Staffing</h5>
+          <p class="small text-secondary">Flexible workforce solutions for short-term and project-based requirements.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-file-signature"></i></div>
+          <h5 class="fw-bold">Contract Hiring</h5>
+          <p class="small text-secondary">Contract-based hiring of skilled and semi-skilled professionals.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+          <h5 class="fw-bold">Permanent Hiring</h5>
+          <p class="small text-secondary">Quality recruitment for long-term roles with stability and retention focus.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-shield-alt"></i></div>
+          <h5 class="fw-bold">Background Verification</h5>
+          <p class="small text-secondary">Candidate verification services to reduce hiring risks and ensure authenticity.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-calculator"></i></div>
+          <h5 class="fw-bold">Payroll Outsourcing</h5>
+          <p class="small text-secondary">Payroll processing, attendance coordination, and compliance support.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-hand-holding-usd"></i></div>
+          <h5 class="fw-bold">Third-Party Payroll</h5>
+          <p class="small text-secondary">Simplified payroll and workforce management through outsourcing.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-user-graduate"></i></div>
+          <h5 class="fw-bold">Internship Programs</h5>
+          <p class="small text-secondary">Internship hiring solutions to support skill development and workforce planning.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <div class="service-card p-4">
+          <div class="icon-circle"><i class="fas fa-globe-asia"></i></div>
+          <h5 class="fw-bold">Pan India Recruitment</h5>
+          <p class="small text-secondary">Nationwide recruitment services ensuring consistent hiring quality.</p>
+          <a href="#" class="fw-semibold text-decoration-none" style="color:#0a2c4e;">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose JMD (8 points) -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Choose JMD Consultancy</h2>
+      <p class="section-subtitle">Professional, ethical, fast, and cost-effective HR recruitment trusted across India.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-balance-scale"></i>
+          <h6 class="fw-bold">Professional & Ethical HR Practices</h6>
+          <p class="small text-secondary">Transparent, compliant, and ethical hiring standards.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-tachometer-alt"></i>
+          <h6 class="fw-bold">Fast Turnaround & Quality Hiring</h6>
+          <p class="small text-secondary">Quick hiring process without compromising candidate quality.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-coins"></i>
+          <h6 class="fw-bold">Cost-Effective Manpower Solutions</h6>
+          <p class="small text-secondary">Affordable HR services optimized to reduce operational costs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-map-marked-alt"></i>
+          <h6 class="fw-bold">Pan-India Recruitment Capability</h6>
+          <p class="small text-secondary">Nationwide hiring reach ensuring consistent talent supply.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-users-cog"></i>
+          <h6 class="fw-bold">Client-Centric Approach</h6>
+          <p class="small text-secondary">Customized hiring solutions based on unique client requirements.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-chart-line"></i>
+          <h6 class="fw-bold">Experienced HR Professionals</h6>
+          <p class="small text-secondary">Dedicated recruiters with industry expertise and proven results.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-expand-arrows-alt"></i>
+          <h6 class="fw-bold">Scalable Workforce Support</h6>
+          <p class="small text-secondary">Flexible staffing solutions to support business growth.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="why-card text-center">
+          <i class="fas fa-bullseye"></i>
+          <h6 class="fw-bold">Result-Oriented Hiring Strategy</h6>
+          <p class="small text-secondary">Focused on performance, retention, and long-term success.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Job Application + Hiring Requirements Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Left: Application Form -->
+      <div class="col-lg-7">
+        <div class="form-section">
+          <h3 class="fw-bold mb-2" style="color: #0a2c4e;">Apply for Job - JMD Consultancy</h3>
+          <p class="text-secondary mb-4">Submit your details and resume. Our HR team will contact you shortly for suitable job opportunities across India.</p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <span><i class="fas fa-check-circle text-primary me-1"></i> Pan India Job Opportunities</span>
+            <span><i class="fas fa-check-circle text-primary me-1"></i> Fast Hiring Process</span>
+            <span><i class="fas fa-check-circle text-primary me-1"></i> Verified Companies</span>
+            <span><i class="fas fa-check-circle text-primary me-1"></i> Free Placement Support</span>
+          </div>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Full Name</label>
+                <input type="text" class="form-control" placeholder="e.g. Anjali Sharma">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="anjali@example.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="9876543210">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Position Applying For</label>
+                <select class="form-select">
+                  <option selected disabled>Select</option>
+                  <option>Frontend Developer</option><option>Backend Developer</option><option>Full Stack</option>
+                  <option>Telecaller</option><option>Voice Process</option><option>HR Executive</option><option>Recruiter</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Experience (e.g. 2 Years)</label>
+                <input type="text" class="form-control" placeholder="2 Years">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Preferred Job Location</label>
+                <input type="text" class="form-control" placeholder="Mumbai / Remote">
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Upload Resume</label>
+                <input class="form-control" type="file">
+                <div class="form-text">No file chosen</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Additional Message (Optional)</label>
+                <textarea class="form-control" rows="2" placeholder="Tell us more..."></textarea>
+              </div>
+              <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-primary rounded-pill px-5 py-2">Submit Application <i class="fas fa-paper-plane ms-2"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Right: Hiring Requirements (Categories) -->
+      <div class="col-lg-5">
+        <h4 class="fw-bold mb-3" style="color:#0a2c4e;">Hiring Requirements</h4>
+        <p class="text-secondary mb-4">We provide recruitment solutions across India.</p>
+        <div class="bg-light p-4 rounded-4">
+          <div class="mb-4">
+            <h6 class="fw-bold"><i class="fas fa-laptop-code me-2" style="color:#0a2c4e;"></i> IT & Software Hiring</h6>
+            <p class="mb-1">Hire skilled developers across India.</p>
+            <span class="badge bg-white text-dark me-2 mb-2 border">✔ Frontend Developer</span>
+            <span class="badge bg-white text-dark me-2 mb-2 border">✔ Backend Developer</span>
+            <span class="badge bg-white text-dark me-2 mb-2 border">✔ Full Stack</span>
+          </div>
+          <div class="mb-4">
+            <h6 class="fw-bold"><i class="fas fa-headset me-2" style="color:#0a2c4e;"></i> BPO / Telecaller</h6>
+            <p>Bulk hiring for call centers.</p>
+            <span class="badge bg-white text-dark me-2 border">✔ Telecaller</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Voice Process</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Customer Support</span>
+          </div>
+          <div class="mb-4">
+            <h6 class="fw-bold"><i class="fas fa-user-tie me-2" style="color:#0a2c4e;"></i> HR & Admin</h6>
+            <span class="badge bg-white text-dark me-2 border">✔ HR Executive</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Recruiter</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Admin</span>
+          </div>
+          <div>
+            <h6 class="fw-bold"><i class="fas fa-chart-bar me-2" style="color:#0a2c4e;"></i> Sales & Marketing</h6>
+            <span class="badge bg-white text-dark me-2 border">✔ Sales Executive</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Field Sales</span>
+            <span class="badge bg-white text-dark me-2 border">✔ Marketing</span>
+          </div>
+        </div>
+        <div class="mt-4 p-3 bg-white border rounded-4 d-flex align-items-center">
+          <i class="fas fa-phone-alt fa-2x me-3" style="color:#0a2c4e;"></i>
+          <div><span class="fw-semibold">Call for bulk hiring:</span><br><strong style="font-size:1.3rem;">9654576537</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 9654576537</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">End-to-End Hiring</a></li><li><a href="#">Bulk / Mass Hiring</a></li><li><a href="#">Temporary Staffing</a></li><li><a href="#">Payroll Outsourcing</a></li><li><a href="#">Pan India Recruitment</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
