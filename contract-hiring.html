@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contract Hiring Services | JMD Consultancy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #edf2f9;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-detail-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .process-step {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #0a2c4e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2c4e;
+      line-height: 1;
+    }
+    .comparison-table th {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+      border: none;
+    }
+    .comparison-table td {
+      border: none;
+      border-bottom: 1px solid #edf2f9;
+      vertical-align: middle;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .role-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .role-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .cta-section {
+      background: linear-gradient(102deg, #0a2c4e 0%, #1e4a76 100%);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      color: white;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #0a2c4e;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
+      border: 2px solid #0a2c4e;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .model-badge {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid #dce6f5;
+      transition: all 0.2s;
+    }
+    .model-badge:hover {
+      background-color: #0a2c4e;
+      color: white;
+      border-color: #0a2c4e;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="130" alt="JMD Consultancy Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 8859399891
+        </span>
+        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2">Hire Contract Staff</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:#0a2c4e;">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none" style="color:#0a2c4e;">Services</a></li>
+            <li class="breadcrumb-item active fw-medium" aria-current="page">Contract Hiring</li>
+          </ol>
+        </nav>
+        <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Contract Hiring Services</h1>
+        <p class="lead mt-3" style="color: #3a506c;">Access skilled professionals on a fixed-term contract basis for your projects, without adding to your permanent headcount. We manage the entire contract staffing lifecycle — from sourcing to offboarding.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Fixed-Term Contracts</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Project-Based Hiring</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Skilled Professionals</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Pan India Coverage</span>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <i class="fas fa-file-signature fa-6x" style="color:#0a2c4e; opacity:0.2;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Overview -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">What is Contract Hiring?</h2>
+        <p style="color: #3f546d; font-size: 1.05rem;">Contract hiring is a staffing model where professionals are engaged for a fixed duration — typically 6 months to 2 years — to work on specific projects, fill skill gaps, or manage temporary workload increases. These contract employees remain on JMD Consultancy's payroll while working at your location or remotely.</p>
+        <p style="color: #3f546d; font-size: 1.05rem;">Unlike temporary staffing which is often for shorter durations and general roles, contract hiring focuses on <strong>skilled and semi-skilled professionals</strong> for longer, more specialized assignments. It's the perfect solution when you need expertise without permanent overhead.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Access Specialized Skills</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>No Headcount Addition</strong></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Zero Compliance Burden</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Flexible Duration 6-24 Months</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <img src="images/contract-hiring.jpg" class="img-fluid rounded-3" alt="Contract Hiring" style="width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="bg-light rounded-3 d-flex align-items-center justify-content-center" style="display: none !important; height: 300px;">
+            <div class="text-center text-secondary">
+              <i class="fas fa-file-contract fa-4x mb-3" style="color:#0a2c4e;"></i>
+              <p class="fw-medium">Contract-Based Professional Hiring</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Statistics -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Contract Hiring Track Record</h2>
+      <p class="section-subtitle">Proven expertise in deploying skilled contract professionals across India.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">5,000+</div>
+          <p class="fw-semibold mt-2 mb-0">Contract Staff Deployed</p>
+          <small class="text-secondary">Currently active</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">7 Days</div>
+          <p class="fw-semibold mt-2 mb-0">Average TAT</p>
+          <small class="text-secondary">For contract hiring</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">150+</div>
+          <p class="fw-semibold mt-2 mb-0">Active Clients</p>
+          <small class="text-secondary">Using contract staffing</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">92%</div>
+          <p class="fw-semibold mt-2 mb-0">Contract Completion</p>
+          <small class="text-secondary">Success rate</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contract Hiring Models -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Contract Hiring Models</h2>
+      <p class="section-subtitle">Flexible engagement models to suit different business needs and project requirements.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-calendar-check"></i></div>
+          <h5 class="fw-bold">Fixed-Term Contract</h5>
+          <p class="small text-secondary">Staff engaged for a pre-defined period (6, 12, 18, or 24 months). Ideal for projects with clear timelines and deliverables. Contract ends automatically on the specified date.</p>
+          <span class="badge bg-light text-dark mt-2">Most Popular</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-project-diagram"></i></div>
+          <h5 class="fw-bold">Project-Based Contract</h5>
+          <p class="small text-secondary">Staff hired for the duration of a specific project. The contract is tied to project completion rather than a calendar date. Perfect for IT implementations, migrations, etc.</p>
+          <span class="badge bg-light text-dark mt-2">Flexible Duration</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-sync-alt"></i></div>
+          <h5 class="fw-bold">Contract-to-Hire</h5>
+          <p class="small text-secondary">Start with a contract period (typically 6 months) and convert to permanent employment if the candidate proves to be a great fit. Reduces permanent hiring risks significantly.</p>
+          <span class="badge bg-light text-dark mt-2">Try Before Hire</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles for Contract Hiring -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Roles We Fill Through Contract Hiring</h2>
+      <p class="section-subtitle">Skilled and semi-skilled professionals across IT and non-IT domains.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="role-card">
+          <i class="fas fa-laptop-code fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h5 class="fw-bold">IT & Technology</h5>
+          <ul class="list-unstyled small text-secondary mt-2 mb-0">
+            <li class="mb-1">• Software Developer</li>
+            <li class="mb-1">• Web Developer</li>
+            <li class="mb-1">• Database Admin</li>
+            <li class="mb-1">• Network Engineer</li>
+            <li class="mb-1">• IT Support Specialist</li>
+            <li>• QA / Test Engineer</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="role-card">
+          <i class="fas fa-chart-pie fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h5 class="fw-bold">Finance & Accounting</h5>
+          <ul class="list-unstyled small text-secondary mt-2 mb-0">
+            <li class="mb-1">• Accountant</li>
+            <li class="mb-1">• Finance Analyst</li>
+            <li class="mb-1">• Tax Consultant</li>
+            <li class="mb-1">• Audit Executive</li>
+            <li class="mb-1">• Accounts Payable</li>
+            <li>• Payroll Specialist</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="role-card">
+          <i class="fas fa-headset fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h5 class="fw-bold">Customer Operations</h5>
+          <ul class="list-unstyled small text-secondary mt-2 mb-0">
+            <li class="mb-1">• Customer Support</li>
+            <li class="mb-1">• Voice Process Agent</li>
+            <li class="mb-1">• Chat Support</li>
+            <li class="mb-1">• Team Leader</li>
+            <li class="mb-1">• Quality Analyst</li>
+            <li>• Trainer</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="role-card">
+          <i class="fas fa-briefcase fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h5 class="fw-bold">Other Functions</h5>
+          <ul class="list-unstyled small text-secondary mt-2 mb-0">
+            <li class="mb-1">• HR Executive</li>
+            <li class="mb-1">• Admin Manager</li>
+            <li class="mb-1">• Sales Executive</li>
+            <li class="mb-1">• Digital Marketing</li>
+            <li class="mb-1">• Content Writer</li>
+            <li>• Graphic Designer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">How Our Contract Hiring Works</h2>
+      <p class="section-subtitle">A streamlined 5-step process to deploy skilled contract professionals quickly.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">1</div>
+          <h5 class="fw-bold">Requirement Analysis</h5>
+          <p class="small text-secondary">We understand the role, skills required, project duration, budget, and any specific qualifications needed.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">2</div>
+          <h5 class="fw-bold">Talent Sourcing</h5>
+          <p class="small text-secondary">We tap into our database, job portals, and professional networks to find the best-fit contract professionals.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">3</div>
+          <h5 class="fw-bold">Screening & Interview</h5>
+          <p class="small text-secondary">Technical screening, skill assessments, and interview coordination with your hiring managers.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">4</div>
+          <h5 class="fw-bold">Contract & Onboarding</h5>
+          <p class="small text-secondary">We handle the contract agreement, documentation, payroll setup, and smooth onboarding.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">5</div>
+          <h5 class="fw-bold">Manage & Offboard</h5>
+          <p class="small text-secondary">Ongoing attendance, payroll, compliance management, and formal offboarding at contract end.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contract vs Permanent vs Temp Comparison -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Contract vs Permanent vs Temp Staffing</h2>
+      <p class="section-subtitle">Understand which staffing model fits your specific business needs.</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="table-responsive">
+          <table class="table comparison-table bg-white rounded-4 p-3 shadow-sm">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th class="text-center">Permanent Hiring</th>
+                <th class="text-center" style="background-color:#0a2c4e; color:white;">Contract Hiring</th>
+                <th class="text-center">Temporary Staffing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Typical Duration</strong></td>
+                <td class="text-center">Permanent / Ongoing</td>
+                <td class="text-center fw-bold">6-24 Months</td>
+                <td class="text-center">1 Day - 3 Months</td>
+              </tr>
+              <tr>
+                <td><strong>Skill Level</strong></td>
+                <td class="text-center">All Levels</td>
+                <td class="text-center fw-bold text-success">Skilled / Semi-Skilled</td>
+                <td class="text-center">General / Entry Level</td>
+              </tr>
+              <tr>
+                <td><strong>Payroll Responsibility</strong></td>
+                <td class="text-center">Employer</td>
+                <td class="text-center fw-bold text-success">JMD Consultancy</td>
+                <td class="text-center">JMD Consultancy</td>
+              </tr>
+              <tr>
+                <td><strong>Best For</strong></td>
+                <td class="text-center">Core Business Roles</td>
+                <td class="text-center fw-bold text-success">Projects / Skill Gaps</td>
+                <td class="text-center">Seasonal / Short-Term</td>
+              </tr>
+              <tr>
+                <td><strong>Conversion Option</strong></td>
+                <td class="text-center">N/A</td>
+                <td class="text-center fw-bold text-success"><i class="fas fa-check"></i> Yes (Contract-to-Hire)</td>
+                <td class="text-center"><i class="fas fa-check"></i> Yes (Temp-to-Perm)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Grid -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Benefits of Contract Hiring with JMD</h2>
+      <p class="section-subtitle">Why leading companies choose our contract staffing solutions.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-user-tie fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Access to Skilled Talent</h6>
+          <p class="small text-secondary">Quick access to qualified professionals with specialized skills that may be difficult or expensive to hire permanently.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-chart-line fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Headcount Flexibility</h6>
+          <p class="small text-secondary">Get work done without increasing permanent headcount. Contract staff don't appear on your permanent payroll budget.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-shield-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Zero Compliance Risk</h6>
+          <p class="small text-secondary">We are the legal employer. All statutory compliance — PF, ESI, TDS, labour laws — is our responsibility.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-hand-holding-usd fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Cost-Effective</h6>
+          <p class="small text-secondary">No recruitment fees, training costs, benefits, or long-term liabilities. Single monthly invoice per contractor.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-sync-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Easy Exit Process</h6>
+          <p class="small text-secondary">No complex termination procedures. Contract ends on the agreed date or can be extended based on project needs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-clipboard-check fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Try Before You Hire</h6>
+          <p class="small text-secondary">With our contract-to-hire model, evaluate professionals on the job before offering them permanent positions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card">
+          <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What is the difference between contract hiring and temporary staffing?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Contract hiring is typically for longer durations (6-24 months) and focuses on skilled/semi-skilled professionals for specific projects or roles. Temporary staffing is usually for shorter durations (days to 3 months) and often for general or entry-level roles to manage seasonal peaks or short-term absences.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Who manages the day-to-day work of contract staff?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  You manage their day-to-day tasks, deliverables, and reporting — just like your permanent employees. We handle all the backend HR administration: payroll, compliance, attendance tracking, and any employment-related issues.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Can contract staff be converted to permanent employees?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, our contract-to-hire model allows you to convert contract staff to your permanent payroll after a minimum engagement period (usually 6 months). There are no conversion fees, making it a risk-free way to evaluate talent.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What happens if I need to end the contract early?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Our contracts include a standard notice period (typically 15-30 days) for early termination. There are no penalties beyond the notice period charges. We handle all offboarding formalities smoothly.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-section text-center">
+      <h2 class="fw-bold mb-3">Looking for Skilled Contract Professionals?</h2>
+      <p class="mb-4" style="color: #b6c9e0; font-size: 1.1rem;">Share your requirements and we'll find the right contract staff for your project within 7 days.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold" style="color:#0a2c4e;"><i class="fas fa-file-signature me-2"></i>Hire Contract Staff</a>
+        <a href="tel:+918859399891" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold"><i class="fas fa-phone-alt me-2"></i>8859399891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 8859399891</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="end-to-end-hiring.html">End-to-End Hiring</a></li>
+          <li><a href="hr-process-outsourcing.html">HR Process Outsourcing</a></li>
+          <li><a href="campus-hiring.html">Campus Hiring</a></li>
+          <li><a href="bulk-mass-hiring.html">Bulk / Mass Hiring</a></li>
+          <li><a href="contract-hiring.html">Contract Hiring</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

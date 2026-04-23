@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permanent Hiring Services | JMD Consultancy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #edf2f9;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-detail-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .process-step {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #0a2c4e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2c4e;
+      line-height: 1;
+    }
+    .guarantee-card {
+      background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
+      border: 2px solid #0a2c4e;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .cta-section {
+      background: linear-gradient(102deg, #0a2c4e 0%, #1e4a76 100%);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      color: white;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #0a2c4e;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .role-badge {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-block;
+      margin: 4px;
+      border: 1px solid #dce6f5;
+    }
+    .industry-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .industry-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="130" alt="JMD Consultancy Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 8859399891
+        </span>
+        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2">Start Hiring</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:#0a2c4e;">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none" style="color:#0a2c4e;">Services</a></li>
+            <li class="breadcrumb-item active fw-medium" aria-current="page">Permanent Hiring</li>
+          </ol>
+        </nav>
+        <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Permanent Hiring Services</h1>
+        <p class="lead mt-3" style="color: #3a506c;">Build your core team with the right long-term talent. We specialize in quality permanent recruitment for all levels — from entry-level to senior leadership — with a focus on retention and cultural fit.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> All Levels Hiring</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Culture Fit Assessment</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> 90-Day Replacement</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Leadership Hiring</span>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <i class="fas fa-briefcase fa-6x" style="color:#0a2c4e; opacity:0.2;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Overview -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">What is Permanent Hiring?</h2>
+        <p style="color: #3f546d; font-size: 1.05rem;">Permanent hiring is the process of recruiting candidates for long-term, core positions within your organization. These employees become part of your permanent workforce, contribute to your company's growth, and build long-term careers with you.</p>
+        <p style="color: #3f546d; font-size: 1.05rem;">At JMD Consultancy, we don't just fill positions — we find the right people who align with your company culture, values, and long-term vision. Our permanent recruitment process emphasizes <strong>quality over quantity</strong>, thorough screening, and cultural fit assessment to ensure high retention and performance.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>90-Day Free Replacement</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>In-Depth Background Checks</strong></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Culture Fit Assessment</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Dedicated Account Manager</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <img src="images/permanent-hiring.jpg" class="img-fluid rounded-3" alt="Permanent Hiring" style="width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="bg-light rounded-3 d-flex align-items-center justify-content-center" style="display: none !important; height: 300px;">
+            <div class="text-center text-secondary">
+              <i class="fas fa-user-tie fa-4x mb-3" style="color:#0a2c4e;"></i>
+              <p class="fw-medium">Quality Permanent Recruitment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Statistics -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Permanent Hiring Track Record</h2>
+      <p class="section-subtitle">Proven expertise in building long-term teams for organizations across India.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">25,000+</div>
+          <p class="fw-semibold mt-2 mb-0">Permanent Placements</p>
+          <small class="text-secondary">Across all levels</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">85%</div>
+          <p class="fw-semibold mt-2 mb-0">1-Year Retention</p>
+          <small class="text-secondary">Industry avg: 65%</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">300+</div>
+          <p class="fw-semibold mt-2 mb-0">Client Companies</p>
+          <small class="text-secondary">Pan India</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">10 Days</div>
+          <p class="fw-semibold mt-2 mb-0">Avg. Time-to-Fill</p>
+          <small class="text-secondary">For mid-level roles</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Permanent Hiring Process -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our 6-Step Permanent Hiring Process</h2>
+      <p class="section-subtitle">A thorough, quality-focused recruitment methodology for long-term hires.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h5 class="fw-bold">Role Understanding</h5>
+          <p class="small text-secondary">Deep dive into the job description, required skills, experience level, team dynamics, and company culture.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h5 class="fw-bold">Targeted Sourcing</h5>
+          <p class="small text-secondary">Multi-channel sourcing — job portals, LinkedIn, headhunting, referrals, and our extensive database.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h5 class="fw-bold">In-Depth Screening</h5>
+          <p class="small text-secondary">Technical evaluation, soft skills assessment, and culture fit analysis before shortlisting.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h5 class="fw-bold">Interview Coordination</h5>
+          <p class="small text-secondary">Efficient scheduling of interviews with your hiring panel, including feedback collection and follow-ups.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h5 class="fw-bold">Offer & Negotiation</h5>
+          <p class="small text-secondary">Managing offer rollout, salary negotiations, and addressing candidate queries to ensure high acceptance.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">6</div>
+          <h5 class="fw-bold">Onboarding & Follow-Up</h5>
+          <p class="small text-secondary">Pre-joining engagement, smooth onboarding support, and 90-day post-joining follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 90-Day Replacement Guarantee -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="guarantee-card">
+      <div class="row align-items-center">
+        <div class="col-lg-2 text-center mb-3 mb-lg-0">
+          <i class="fas fa-shield-alt fa-4x" style="color:#0a2c4e;"></i>
+        </div>
+        <div class="col-lg-8">
+          <h3 class="fw-bold mb-2" style="color:#0a2c4e;">90-Day Free Replacement Guarantee</h3>
+          <p class="mb-0" style="color:#3f546d; font-size: 1.05rem;">We stand behind every permanent placement. If a candidate leaves within 90 days of joining — for any reason — we will find a replacement at <strong>no additional cost</strong>. This is our commitment to quality and your peace of mind.</p>
+        </div>
+        <div class="col-lg-2 text-center mt-3 mt-lg-0">
+          <span class="badge bg-success px-4 py-3 rounded-pill" style="font-size: 1rem;">Zero Cost<br>Replacement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industries We Serve -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Industries We Serve for Permanent Hiring</h2>
+      <p class="section-subtitle">Deep expertise in permanent recruitment across diverse sectors.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-laptop-code fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">IT & Software</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-building fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">Manufacturing</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-headset fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">BPO / ITES</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-chart-line fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">Banking & Finance</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-hospital fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">Healthcare</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="industry-card">
+          <i class="fas fa-shopping-cart fa-2x mb-2" style="color:#0a2c4e;"></i>
+          <p class="fw-semibold mb-0">Retail & E-com</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="fw-medium" style="color:#3a506c;">And more...</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <span class="role-badge">Pharmaceutical</span>
+        <span class="role-badge">Logistics</span>
+        <span class="role-badge">Hospitality</span>
+        <span class="role-badge">EdTech</span>
+        <span class="role-badge">Real Estate</span>
+        <span class="role-badge">FMCG</span>
+        <span class="role-badge">Automobile</span>
+        <span class="role-badge">Insurance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles We Hire For -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Roles We Hire Across Levels</h2>
+      <p class="section-subtitle">From entry-level to senior leadership positions.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-user-graduate"></i></div>
+          <h5 class="fw-bold">Entry Level</h5>
+          <p class="small text-secondary">Freshers and candidates with 0-2 years of experience.</p>
+          <div class="d-flex flex-wrap justify-content-center mt-2">
+            <span class="role-badge">Trainee</span>
+            <span class="role-badge">Junior Executive</span>
+            <span class="role-badge">Associate</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-user-tie"></i></div>
+          <h5 class="fw-bold">Mid Level</h5>
+          <p class="small text-secondary">Experienced professionals with 3-8 years of domain expertise.</p>
+          <div class="d-flex flex-wrap justify-content-center mt-2">
+            <span class="role-badge">Manager</span>
+            <span class="role-badge">Team Lead</span>
+            <span class="role-badge">Specialist</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-crown"></i></div>
+          <h5 class="fw-bold">Senior & Leadership</h5>
+          <p class="small text-secondary">Senior managers, directors, and C-suite executives with 10+ years.</p>
+          <div class="d-flex flex-wrap justify-content-center mt-2">
+            <span class="role-badge">Director</span>
+            <span class="role-badge">VP</span>
+            <span class="role-badge">Head of Dept</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Grid -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Choose JMD for Permanent Hiring?</h2>
+      <p class="section-subtitle">What sets our permanent recruitment services apart.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-search-plus fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Quality-First Approach</h6>
+          <p class="small text-secondary">We prioritize candidate quality over quantity. Every profile is thoroughly screened before reaching you.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-heart fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Culture Fit Assessment</h6>
+          <p class="small text-secondary">We assess not just skills but also alignment with your company values, work style, and team dynamics.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-clock fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Faster Time-to-Fill</h6>
+          <p class="small text-secondary">Our extensive database and proactive sourcing ensure we present qualified candidates quickly.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-user-shield fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Thorough Background Checks</h6>
+          <p class="small text-secondary">Comprehensive verification of employment history, education, references, and criminal records.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-handshake fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">High Offer Acceptance</h6>
+          <p class="small text-secondary">Our candidate engagement process ensures 85%+ offer acceptance rate through transparent communication.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-chart-bar fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Retention-Focused Hiring</h6>
+          <p class="small text-secondary">Our process is designed to find candidates who will stay and grow with your organization long-term.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card">
+          <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How does the 90-day replacement guarantee work?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  If a candidate we placed leaves your organization within 90 days of joining (whether resignation, termination, or no-show), we will find and place a replacement candidate at absolutely no additional recruitment fee. This applies to all permanent placements.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  What is the typical turnaround time for permanent hiring?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  For mid-level roles, we typically present the first set of qualified candidates within 3-5 working days. The complete hiring cycle (from requirement to offer acceptance) averages 7-15 days depending on role seniority and industry specialization. Leadership roles may take 15-30 days.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Do you handle senior leadership and niche roles?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we have a dedicated team for senior and niche hiring. We use executive search, headhunting, and industry network mapping to identify and attract senior professionals (Director, VP, CXO level) who may not be actively looking for jobs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What are your fees for permanent hiring?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Our fees are based on a percentage of the candidate's annual CTC — typically ranging from 8.33% to 15% depending on the role level, number of positions, and engagement terms. We offer competitive rates and flexible payment terms including a partial replacement guarantee period.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-section text-center">
+      <h2 class="fw-bold mb-3">Ready to Build Your Core Team?</h2>
+      <p class="mb-4" style="color: #b6c9e0; font-size: 1.1rem;">Let's discuss your permanent hiring needs and find the right talent for your organization.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold" style="color:#0a2c4e;"><i class="fas fa-briefcase me-2"></i>Hire Permanent Staff</a>
+        <a href="tel:+918859399891" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold"><i class="fas fa-phone-alt me-2"></i>8859399891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 8859399891</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="end-to-end-hiring.html">End-to-End Hiring</a></li>
+          <li><a href="hr-process-outsourcing.html">HR Process Outsourcing</a></li>
+          <li><a href="campus-hiring.html">Campus Hiring</a></li>
+          <li><a href="bulk-mass-hiring.html">Bulk / Mass Hiring</a></li>
+          <li><a href="permanent-hiring.html">Permanent Hiring</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll Outsourcing Services | JMD Consultancy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #edf2f9;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-detail-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .process-step {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #0a2c4e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2c4e;
+      line-height: 1;
+    }
+    .comparison-table th {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+      border: none;
+    }
+    .comparison-table td {
+      border: none;
+      border-bottom: 1px solid #edf2f9;
+      vertical-align: middle;
+    }
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    .compliance-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .compliance-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .cta-section {
+      background: linear-gradient(102deg, #0a2c4e 0%, #1e4a76 100%);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      color: white;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #0a2c4e;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .statute-badge {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      padding: 10px 20px;
+      border-radius: 40px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid #dce6f5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="130" alt="JMD Consultancy Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 8859399891
+        </span>
+        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2">Outsource Payroll</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:#0a2c4e;">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none" style="color:#0a2c4e;">Services</a></li>
+            <li class="breadcrumb-item active fw-medium" aria-current="page">Payroll Outsourcing</li>
+          </ol>
+        </nav>
+        <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Payroll Outsourcing Services</h1>
+        <p class="lead mt-3" style="color: #3a506c;">Simplify payroll processing, ensure 100% statutory compliance, and eliminate payroll errors. We handle your end-to-end payroll — from salary calculations to filings — while you focus on your business.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Salary Processing</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> PF / ESI / PT Filing</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> TDS Management</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Compliance Support</span>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <i class="fas fa-calculator fa-6x" style="color:#0a2c4e; opacity:0.2;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Overview -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">What is Payroll Outsourcing?</h2>
+        <p style="color: #3f546d; font-size: 1.05rem;">Payroll outsourcing is the process of delegating your entire payroll operations to an external expert — JMD Consultancy. We take over salary calculations, statutory deductions (PF, ESI, PT, TDS), compliance filings, payslip generation, and all related administrative tasks.</p>
+        <p style="color: #3f546d; font-size: 1.05rem;">This eliminates the need for an in-house payroll team, reduces errors and compliance risks, and ensures your employees are paid accurately and on time — every single month. Our team stays constantly updated with changing labour laws and tax regulations across all Indian states.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>100% Statutory Compliance</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Accurate & Timely Salary</strong></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Dedicated Payroll Manager</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Digital Payslips & Reports</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <img src="images/payroll-outsourcing.jpg" class="img-fluid rounded-3" alt="Payroll Outsourcing" style="width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="bg-light rounded-3 d-flex align-items-center justify-content-center" style="display: none !important; height: 300px;">
+            <div class="text-center text-secondary">
+              <i class="fas fa-file-invoice-dollar fa-4x mb-3" style="color:#0a2c4e;"></i>
+              <p class="fw-medium">End-to-End Payroll Management</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Statistics -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Payroll Outsourcing Track Record</h2>
+      <p class="section-subtitle">Trusted by companies across India for accurate and compliant payroll processing.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">50,000+</div>
+          <p class="fw-semibold mt-2 mb-0">Employees Processed</p>
+          <small class="text-secondary">Monthly payroll</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">200+</div>
+          <p class="fw-semibold mt-2 mb-0">Companies Served</p>
+          <small class="text-secondary">Across industries</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">99.9%</div>
+          <p class="fw-semibold mt-2 mb-0">Accuracy Rate</p>
+          <small class="text-secondary">In salary processing</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <p class="fw-semibold mt-2 mb-0">Compliance Penalties</p>
+          <small class="text-secondary">For our clients</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payroll Services We Handle -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Payroll Services We Handle</h2>
+      <p class="section-subtitle">Complete payroll management — from gross-to-net calculations to statutory filings.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-money-check-alt"></i></div>
+          <h5 class="fw-bold">Salary Processing</h5>
+          <p class="small text-secondary">Gross-to-net salary calculation, arrears, bonuses, incentives, overtime, and deductions management.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-file-invoice"></i></div>
+          <h5 class="fw-bold">Payslip Generation</h5>
+          <p class="small text-secondary">Digital monthly payslips with complete salary breakup, deductions, and employer contributions.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-piggy-bank"></i></div>
+          <h5 class="fw-bold">PF / ESI Management</h5>
+          <p class="small text-secondary">PF registration, monthly challan generation, ESI filings, UAN management, and withdrawal support.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-receipt"></i></div>
+          <h5 class="fw-bold">TDS Calculation & Filing</h5>
+          <p class="small text-secondary">TDS deduction as per income tax slabs, Form 16 generation, and quarterly TDS return filing.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-landmark"></i></div>
+          <h5 class="fw-bold">Professional Tax</h5>
+          <p class="small text-secondary">State-wise PT deduction, challan generation, and timely filing across all applicable states.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="service-detail-card">
+          <div class="icon-circle mx-auto"><i class="fas fa-chart-bar"></i></div>
+          <h5 class="fw-bold">Payroll Reports</h5>
+          <p class="small text-secondary">Monthly salary register, bank transfer file, cost center-wise reports, and compliance dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statutory Compliance We Cover -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Statutory Compliance We Cover</h2>
+      <p class="section-subtitle">Stay fully compliant with all Indian labour laws and statutory requirements.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="compliance-card">
+          <i class="fas fa-building fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Provident Fund (PF)</h6>
+          <p class="small text-secondary">Monthly PF challan, UAN generation, transfer, withdrawal, and annual returns.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="compliance-card">
+          <i class="fas fa-hospital-symbol fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">ESI (Employee State Insurance)</h6>
+          <p class="small text-secondary">ESI registration, monthly contribution, IP number generation, and half-yearly returns.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="compliance-card">
+          <i class="fas fa-file-contract fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Labour Welfare Fund</h6>
+          <p class="small text-secondary">State-specific LWF contribution calculation, challan, and annual filing.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="compliance-card">
+          <i class="fas fa-clipboard-check fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Other Statutes</h6>
+          <p class="small text-secondary">Shops & Establishment Act, Minimum Wages, Bonus Act, Gratuity, and Maternity Benefit.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p class="fw-medium" style="color:#3a506c;">We handle compliance across all Indian states including:</p>
+      <div class="d-flex flex-wrap justify-content-center">
+        <span class="statute-badge">Maharashtra</span>
+        <span class="statute-badge">Karnataka</span>
+        <span class="statute-badge">Delhi-NCR</span>
+        <span class="statute-badge">Tamil Nadu</span>
+        <span class="statute-badge">Gujarat</span>
+        <span class="statute-badge">Telangana</span>
+        <span class="statute-badge">Uttar Pradesh</span>
+        <span class="statute-badge">West Bengal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">How Our Payroll Outsourcing Works</h2>
+      <p class="section-subtitle">A simple 4-step process to transition your payroll operations seamlessly.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">1</div>
+          <h5 class="fw-bold">Setup & Onboarding</h5>
+          <p class="small text-secondary">We collect employee data, salary structure, and set up your payroll on our secure system.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">2</div>
+          <h5 class="fw-bold">Monthly Input Collection</h5>
+          <p class="small text-secondary">You provide monthly inputs — attendance, leaves, new joinees, exits, and any adjustments.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">3</div>
+          <h5 class="fw-bold">Processing & Review</h5>
+          <p class="small text-secondary">We process payroll, share draft reports for your review, and incorporate any changes.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">4</div>
+          <h5 class="fw-bold">Disbursement & Filing</h5>
+          <p class="small text-secondary">Final salary disbursement, payslip release, and all statutory filings completed on time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- In-House vs Outsourced Comparison -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <h2 class="section-title">In-House vs Outsourced Payroll</h2>
+        <p style="color: #3f546d;">See how outsourcing payroll to JMD Consultancy compares with managing it internally.</p>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Save up to <strong>45%</strong> on payroll management costs</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Zero</strong> compliance risk or penalties</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Guaranteed</strong> on-time salary every month</li>
+        </ul>
+      </div>
+      <div class="col-lg-7">
+        <div class="table-responsive">
+          <table class="table comparison-table bg-white rounded-4 p-3 shadow-sm">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th class="text-center">In-House Payroll</th>
+                <th class="text-center" style="background-color:#0a2c4e; color:white;">JMD Payroll</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monthly Cost (50 employees)</strong></td>
+                <td class="text-center">₹25,000 - ₹40,000+</td>
+                <td class="text-center fw-bold text-success">₹8,000 - ₹15,000</td>
+              </tr>
+              <tr>
+                <td><strong>Compliance Risk</strong></td>
+                <td class="text-center"><span class="badge bg-danger">High</span></td>
+                <td class="text-center"><span class="badge bg-success">Zero</span></td>
+              </tr>
+              <tr>
+                <td><strong>Software Cost</strong></td>
+                <td class="text-center">₹15,000 - ₹50,000/year</td>
+                <td class="text-center fw-bold text-success">Included</td>
+              </tr>
+              <tr>
+                <td><strong>Dedicated Expert</strong></td>
+                <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                <td class="text-center fw-bold"><i class="fas fa-check text-success"></i> Included</td>
+              </tr>
+              <tr>
+                <td><strong>Error Rate</strong></td>
+                <td class="text-center">2-5%</td>
+                <td class="text-center fw-bold text-success">&lt;0.1%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Grid -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Benefits of Payroll Outsourcing with JMD</h2>
+      <p class="section-subtitle">Why businesses choose to outsource their payroll to us.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-shield-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">100% Compliance Assurance</h6>
+          <p class="small text-secondary">All PF, ESI, PT, LWF, and TDS filings done accurately and on time. We take full responsibility for compliance.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-clock fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Save Time & Resources</h6>
+          <p class="small text-secondary">Free up your HR and finance teams from time-consuming payroll tasks. Focus on strategic initiatives instead.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-lock fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Data Security</h6>
+          <p class="small text-secondary">All payroll data is processed on secure, encrypted platforms with role-based access controls.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-coins fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Cost-Effective</h6>
+          <p class="small text-secondary">No need to hire payroll specialists or invest in payroll software. Predictable monthly cost.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-sync-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Always Updated</h6>
+          <p class="small text-secondary">We stay current with changing tax laws, labour regulations, and statutory rates across all states.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-headset fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Employee Query Support</h6>
+          <p class="small text-secondary">We handle employee payroll queries, PF withdrawal questions, and Form 16 requests directly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card">
+          <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How do we share monthly payroll inputs with you?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  We provide a simple Excel template for monthly inputs — attendance, leaves, overtime, new joinees, exits, and any salary adjustments. You can email the filled template or upload it to our secure portal. We also integrate with attendance systems for automated data transfer.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  What happens if there's a payroll error?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  We maintain a 99.9% accuracy rate. In the rare event of an error, we take full ownership — rectifying it immediately and adjusting in the next payroll cycle or through a supplementary payout. Any penalty arising from our compliance error is borne by us.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Can you handle multi-state payroll compliance?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we specialize in multi-state payroll processing. Each state has different Professional Tax rates, Labour Welfare Fund rules, and Shops & Establishment compliance requirements. Our system automatically applies state-specific rules based on employee work locations.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  What is the minimum employee count for payroll outsourcing?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  We serve companies of all sizes — from startups with 5 employees to large enterprises with 5000+ employees. Our pricing is flexible and scales based on your headcount. There's no minimum requirement to get started.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-section text-center">
+      <h2 class="fw-bold mb-3">Ready to Simplify Your Payroll?</h2>
+      <p class="mb-4" style="color: #b6c9e0; font-size: 1.1rem;">Get accurate payroll processing, 100% compliance, and peace of mind — all at a fraction of in-house costs.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold" style="color:#0a2c4e;"><i class="fas fa-calculator me-2"></i>Get Payroll Quote</a>
+        <a href="tel:+918859399891" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold"><i class="fas fa-phone-alt me-2"></i>8859399891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 8859399891</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="end-to-end-hiring.html">End-to-End Hiring</a></li>
+          <li><a href="hr-process-outsourcing.html">HR Process Outsourcing</a></li>
+          <li><a href="campus-hiring.html">Campus Hiring</a></li>
+          <li><a href="bulk-mass-hiring.html">Bulk / Mass Hiring</a></li>
+          <li><a href="payroll-outsourcing.html">Payroll Outsourcing</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

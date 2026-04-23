@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Hiring Services | JMD Consultancy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #edf2f9;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-detail-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .process-step {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      position: relative;
+      transition: all 0.2s;
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #0a2c4e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2c4e;
+      line-height: 1;
+    }
+    .cta-section {
+      background: linear-gradient(102deg, #0a2c4e 0%, #1e4a76 100%);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      color: white;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #0a2c4e;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .role-badge {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-block;
+      margin: 4px;
+      border: 1px solid #dce6f5;
+    }
+    .timeline-dot {
+      width: 16px;
+      height: 16px;
+      background-color: #0a2c4e;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="130" alt="JMD Consultancy Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 8859399891
+        </span>
+        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2">Plan Campus Drive</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:#0a2c4e;">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none" style="color:#0a2c4e;">Services</a></li>
+            <li class="breadcrumb-item active fw-medium" aria-current="page">Campus Hiring</li>
+          </ol>
+        </nav>
+        <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Campus Hiring Programs</h1>
+        <p class="lead mt-3" style="color: #3a506c;">Build your future workforce with top young talent from premier institutions. We design and execute structured campus recruitment drives that connect you with fresh graduates ready to make an impact.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Fresher Hiring</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Internship Programs</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Campus Drives</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Assessment Centers</span>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <i class="fas fa-graduation-cap fa-6x" style="color:#0a2c4e; opacity:0.2;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Overview -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">What is Campus Hiring?</h2>
+        <p style="color: #3f546d; font-size: 1.05rem;">Campus hiring is a strategic recruitment approach where companies visit educational institutions to hire fresh graduates and post-graduates. JMD Consultancy acts as your complete campus recruitment partner — identifying the right colleges, managing pre-placement talks, conducting assessments, and coordinating the entire selection process.</p>
+        <p style="color: #3f546d; font-size: 1.05rem;">This approach builds a strong talent pipeline for entry-level roles, reduces long-term recruitment costs, and brings fresh perspectives and energy into your organization.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Access 500+ Colleges</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Pre-Screened Talent Pool</strong></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>End-to-End Drive Management</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Faster Bulk Hiring</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <img src="images/campus-hiring.jpg" class="img-fluid rounded-3" alt="Campus Hiring Drive" style="width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="bg-light rounded-3 d-flex align-items-center justify-content-center" style="display: none !important; height: 300px;">
+            <div class="text-center text-secondary">
+              <i class="fas fa-university fa-4x mb-3" style="color:#0a2c4e;"></i>
+              <p class="fw-medium">Campus Recruitment Drive</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Statistics -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Campus Hiring Reach</h2>
+      <p class="section-subtitle">Numbers that speak for our expertise in fresher recruitment.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <p class="fw-semibold mt-2 mb-0">Partner Colleges</p>
+          <small class="text-secondary">Across India</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">15,000+</div>
+          <p class="fw-semibold mt-2 mb-0">Freshers Placed</p>
+          <small class="text-secondary">In last 3 years</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">200+</div>
+          <p class="fw-semibold mt-2 mb-0">Campus Drives</p>
+          <small class="text-secondary">Conducted annually</small>
+        </div>
+      </div>
+      <div class="col-6 col-md-6 col-lg-3">
+        <div class="stat-card">
+          <div class="stat-number">85%</div>
+          <p class="fw-semibold mt-2 mb-0">Offer Acceptance</p>
+          <small class="text-secondary">Conversion rate</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Campus Hiring Process - 6 Steps -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Campus Hiring Process</h2>
+      <p class="section-subtitle">A structured 6-step approach to hire the best fresh talent from top institutions.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h5 class="fw-bold">College Identification</h5>
+          <p class="small text-secondary">We shortlist colleges based on your role requirements, skill sets, location preferences, and budget.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h5 class="fw-bold">Pre-Placement Engagement</h5>
+          <p class="small text-secondary">Organizing pre-placement talks, webinars, and branding sessions to attract top students.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h5 class="fw-bold">Registration & Screening</h5>
+          <p class="small text-secondary">Managing student registrations and initial resume screening based on eligibility criteria.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h5 class="fw-bold">Online Assessments</h5>
+          <p class="small text-secondary">Aptitude tests, technical assessments, and psychometric evaluations conducted online or on-campus.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h5 class="fw-bold">Interview Coordination</h5>
+          <p class="small text-secondary">Scheduling and managing technical, group discussion, and HR interview rounds seamlessly.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="process-step">
+          <div class="step-number">6</div>
+          <h5 class="fw-bold">Offer Rollout & Onboarding</h5>
+          <p class="small text-secondary">Managing offer letters, acceptance tracking, and pre-joining engagement until onboarding.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles Suitable for Campus Hiring -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Popular Roles for Campus Hiring</h2>
+      <p class="section-subtitle">Entry-level and fresher positions we frequently hire for across industries.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 h-100" style="border: 1px solid #e9eef4;">
+          <h5 class="fw-bold mb-3"><i class="fas fa-laptop-code me-2" style="color:#0a2c4e;"></i>IT & Software</h5>
+          <div class="d-flex flex-wrap">
+            <span class="role-badge">Software Developer</span>
+            <span class="role-badge">Web Developer</span>
+            <span class="role-badge">Mobile App Developer</span>
+            <span class="role-badge">Data Analyst</span>
+            <span class="role-badge">QA Tester</span>
+            <span class="role-badge">IT Support</span>
+            <span class="role-badge">DevOps Trainee</span>
+            <span class="role-badge">UI/UX Designer</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 h-100" style="border: 1px solid #e9eef4;">
+          <h5 class="fw-bold mb-3"><i class="fas fa-building me-2" style="color:#0a2c4e;"></i>Non-IT & Business</h5>
+          <div class="d-flex flex-wrap">
+            <span class="role-badge">Sales Executive</span>
+            <span class="role-badge">Customer Support</span>
+            <span class="role-badge">HR Trainee</span>
+            <span class="role-badge">Finance Analyst</span>
+            <span class="role-badge">Marketing Associate</span>
+            <span class="role-badge">Operations Trainee</span>
+            <span class="role-badge">Telecaller</span>
+            <span class="role-badge">Back Office Executive</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits for Employers -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Campus Hiring Makes Business Sense</h2>
+      <p class="section-subtitle">Strategic advantages of building a fresher talent pipeline for your organization.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-seedling fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Fresh Perspectives</h6>
+          <p class="small text-secondary">Young graduates bring innovative ideas, new energy, and adaptability to evolving business needs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-coins fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Cost-Effective Hiring</h6>
+          <p class="small text-secondary">Lower salary expectations compared to experienced hires. Build talent from within at reduced costs.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-users-cog fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Strong Employer Branding</h6>
+          <p class="small text-secondary">Campus presence builds long-term brand recognition among the future workforce and academic circles.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-tachometer-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Bulk Hiring at Speed</h6>
+          <p class="small text-secondary">Hire multiple candidates in a single drive. Ideal for filling large batches of entry-level positions quickly.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-hand-holding-heart fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Higher Retention Rates</h6>
+          <p class="small text-secondary">Freshers trained within your culture tend to stay longer and grow into loyal, long-term employees.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-chart-line fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Succession Planning</h6>
+          <p class="small text-secondary">Build a strong talent bench for future leadership roles by hiring and nurturing graduates early.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card">
+          <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How long does it take to organize a campus drive?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  A typical campus drive can be organized within 2-4 weeks, including college identification, pre-placement talks, assessments, and final interviews. The timeline varies based on academic calendars and college availability.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Do you handle campus drives across all states?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we have partnerships with colleges across India including Maharashtra, Karnataka, Delhi-NCR, Tamil Nadu, Gujarat, Uttar Pradesh, and more. We can organize Pan-India campus drives based on your requirements.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What is the minimum batch size for a campus drive?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  We recommend a minimum hiring requirement of 10-15 positions for a dedicated campus drive. However, we can also help with smaller requirements by pooling candidates from multiple colleges.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Can you manage both online and offline campus drives?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Absolutely. We have expertise in managing virtual campus drives with online assessments and video interviews, as well as traditional on-campus recruitment events with physical presence.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-section text-center">
+      <h2 class="fw-bold mb-3">Ready to Hire Fresh Talent from Top Colleges?</h2>
+      <p class="mb-4" style="color: #b6c9e0; font-size: 1.1rem;">Let us plan and execute your next campus recruitment drive — end to end.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold" style="color:#0a2c4e;"><i class="fas fa-calendar-alt me-2"></i>Schedule a Campus Drive</a>
+        <a href="tel:+918859399891" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold"><i class="fas fa-phone-alt me-2"></i>8859399891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 8859399891</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="end-to-end-hiring.html">End-to-End Hiring</a></li>
+          <li><a href="hr-process-outsourcing.html">HR Process Outsourcing</a></li>
+          <li><a href="campus-hiring.html">Campus Hiring</a></li>
+          <li><a href="bulk-mass-hiring.html">Bulk / Mass Hiring</a></li>
+          <li><a href="payroll-outsourcing.html">Payroll Outsourcing</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Verification Services | JMD Consultancy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafc;
+    }
+    .navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      background-color: #ffffff;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #0a2c4e !important;
+    }
+    .btn-primary {
+      background-color: #0a2c4e;
+      border-color: #0a2c4e;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+    }
+    .btn-primary:hover {
+      background-color: #1e4a76;
+      border-color: #1e4a76;
+    }
+    .btn-outline-primary {
+      border-color: #0a2c4e;
+      color: #0a2c4e;
+      border-radius: 30px;
+      font-weight: 500;
+      padding: 0.6rem 1.5rem;
+    }
+    .btn-outline-primary:hover {
+      background-color: #0a2c4e;
+      color: white;
+    }
+    .page-header {
+      background: linear-gradient(102deg, #f0f6ff 0%, #ffffff 100%);
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid #edf2f9;
+    }
+    .call-badge {
+      background-color: #1e4a76;
+      padding: 0.6rem 1.3rem;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .call-badge i {
+      margin-right: 8px;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0a2c4e;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: #5c6f87;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+    .icon-circle {
+      width: 55px;
+      height: 55px;
+      background-color: #eef4ff;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .service-detail-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .service-detail-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .process-step {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .process-step:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background-color: #0a2c4e;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .benefit-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.3rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1rem;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.03);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #0a2c4e;
+      line-height: 1;
+    }
+    .risk-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+      height: 100%;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .risk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -8px rgba(10,44,78,0.08);
+    }
+    .cta-section {
+      background: linear-gradient(102deg, #0a2c4e 0%, #1e4a76 100%);
+      border-radius: 30px;
+      padding: 3rem 2rem;
+      color: white;
+    }
+    .faq-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10,44,78,0.05);
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f0f6ff;
+      color: #0a2c4e;
+      font-weight: 600;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #0a2c4e;
+    }
+    .footer {
+      background-color: #0a1c2e;
+      color: #e0e9f2;
+    }
+    .footer a {
+      color: #b6c9e0;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      color: white;
+    }
+    .footer h6 {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .check-item {
+      background: white;
+      border-radius: 16px;
+      padding: 1.2rem 1rem;
+      border: 1px solid #e9eef4;
+      text-align: center;
+      height: 100%;
+      transition: all 0.2s;
+    }
+    .check-item:hover {
+      border-color: #0a2c4e;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .check-item i {
+      color: #0a2c4e;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f6ff 0%, #ffffff 100%);
+      border: 2px solid #0a2c4e;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.png" width="130" alt="JMD Consultancy Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center">
+        <span class="call-badge me-3 d-none d-lg-block">
+          <i class="fas fa-phone-alt"></i> 8859399891
+        </span>
+        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2">Verify Candidates</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none" style="color:#0a2c4e;">Home</a></li>
+            <li class="breadcrumb-item"><a href="services.html" class="text-decoration-none" style="color:#0a2c4e;">Services</a></li>
+            <li class="breadcrumb-item active fw-medium" aria-current="page">Background Verification</li>
+          </ol>
+        </nav>
+        <h1 class="display-5 fw-bold" style="color: #0a2c4e;">Background Verification Services</h1>
+        <p class="lead mt-3" style="color: #3a506c;">Minimize hiring risks with comprehensive pre-employment and post-employment background checks. Verify candidate credentials, employment history, criminal records, and more — before they join your organization.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Employment Verification</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Education Check</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Criminal Record Check</span>
+          <span class="badge bg-light text-dark px-3 py-2 rounded-pill border"><i class="fas fa-check-circle text-success me-1"></i> Address Verification</span>
+        </div>
+      </div>
+      <div class="col-lg-4 d-none d-lg-block text-center">
+        <i class="fas fa-shield-alt fa-6x" style="color:#0a2c4e; opacity:0.2;"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Overview -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <h2 class="section-title">What is Background Verification?</h2>
+        <p style="color: #3f546d; font-size: 1.05rem;">Background Verification (BGV) is the process of validating the information provided by a candidate — including their identity, employment history, educational qualifications, criminal records, and other credentials. It's a critical step in the hiring process to ensure you're bringing trustworthy individuals into your organization.</p>
+        <p style="color: #3f546d; font-size: 1.05rem;">JMD Consultancy provides comprehensive BGV services with <strong>fast turnaround times</strong>, thorough checks, and detailed verification reports. We help companies across India reduce hiring fraud, comply with industry regulations, and build a safe, reliable workforce.</p>
+        <div class="row mt-4">
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Reduce Hiring Fraud</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Regulatory Compliance</strong></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled">
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Workplace Safety</strong></li>
+              <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i><strong>Detailed Reports</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-white p-4 rounded-4 border" style="border-color: #e9eef4 !important;">
+          <img src="images/background-verification.jpg" class="img-fluid rounded-3" alt="Background Verification" style="width: 100%;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="bg-light rounded-3 d-flex align-items-center justify-content-center" style="display: none !important; height: 300px;">
+            <div class="text-center text-secondary">
+              <i class="fas fa-user-check fa-4x mb-3" style="color:#0a2c4e;"></i>
+              <p class="fw-medium">Candidate Background Verification</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why BGV Matters - Statistics -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Why Background Verification Matters</h2>
+      <p class="section-subtitle">Alarming statistics that highlight the importance of thorough candidate screening.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="risk-card">
+          <i class="fas fa-exclamation-triangle fa-2x mb-3" style="color:#dc3545;"></i>
+          <div class="stat-number" style="color:#dc3545;">48%</div>
+          <p class="fw-semibold mt-2 mb-0">Resume Discrepancies</p>
+          <small class="text-secondary">Candidates with at least one discrepancy in their resume</small>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="risk-card">
+          <i class="fas fa-graduation-cap fa-2x mb-3" style="color:#dc3545;"></i>
+          <div class="stat-number" style="color:#dc3545;">32%</div>
+          <p class="fw-semibold mt-2 mb-0">Fake Degrees</p>
+          <small class="text-secondary">Educational qualification discrepancies found</small>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="risk-card">
+          <i class="fas fa-briefcase fa-2x mb-3" style="color:#dc3545;"></i>
+          <div class="stat-number" style="color:#dc3545;">27%</div>
+          <p class="fw-semibold mt-2 mb-0">Employment Gaps Hidden</p>
+          <small class="text-secondary">Candidates hiding or misrepresenting employment history</small>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="risk-card">
+          <i class="fas fa-balance-scale fa-2x mb-3" style="color:#dc3545;"></i>
+          <div class="stat-number" style="color:#dc3545;">15%</div>
+          <p class="fw-semibold mt-2 mb-0">Criminal Background</p>
+          <small class="text-secondary">Candidates with undisclosed criminal records</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Types of Checks -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Background Verification Checks</h2>
+      <p class="section-subtitle">Comprehensive verification services covering all critical aspects of a candidate's background.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-id-card"></i>
+          <h6 class="fw-bold mt-2">Identity Verification</h6>
+          <p class="small text-secondary mb-0">Aadhaar, PAN, Passport, Voter ID validation</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h6 class="fw-bold mt-2">Education Check</h6>
+          <p class="small text-secondary mb-0">Degree, diploma, certificates verification from institutions</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-briefcase"></i>
+          <h6 class="fw-bold mt-2">Employment History</h6>
+          <p class="small text-secondary mb-0">Previous employer verification, designation, tenure, salary</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-gavel"></i>
+          <h6 class="fw-bold mt-2">Criminal Record</h6>
+          <p class="small text-secondary mb-0">Police verification, court records, FIR database check</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <h6 class="fw-bold mt-2">Address Verification</h6>
+          <p class="small text-secondary mb-0">Current and permanent address physical verification</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-credit-card"></i>
+          <h6 class="fw-bold mt-2">Credit History</h6>
+          <p class="small text-secondary mb-0">CIBIL score, financial defaults, loan history check</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-user-friends"></i>
+          <h6 class="fw-bold mt-2">Reference Check</h6>
+          <p class="small text-secondary mb-0">Professional and personal reference validation</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="check-item">
+          <i class="fas fa-globe"></i>
+          <h6 class="fw-bold mt-2">Social Media Check</h6>
+          <p class="small text-secondary mb-0">Online presence screening for red flags</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BGV Process -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Verification Process</h2>
+      <p class="section-subtitle">A fast, transparent, and confidential 5-step verification process.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">1</div>
+          <h5 class="fw-bold">Candidate Consent</h5>
+          <p class="small text-secondary">We obtain written consent from the candidate as per legal requirements before initiating checks.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">2</div>
+          <h5 class="fw-bold">Document Collection</h5>
+          <p class="small text-secondary">Collection of all relevant documents — ID proofs, certificates, relieving letters, references.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">3</div>
+          <h5 class="fw-bold">Verification Execution</h5>
+          <p class="small text-secondary">Multi-source verification through database checks, institution/employer contact, and physical visits.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">4</div>
+          <h5 class="fw-bold">Report Generation</h5>
+          <p class="small text-secondary">Comprehensive digital report with clear status: Verified, Discrepancy Found, or Unable to Verify.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl">
+        <div class="process-step text-center">
+          <div class="step-number mx-auto">5</div>
+          <h5 class="fw-bold">Client Submission</h5>
+          <p class="small text-secondary">Secure delivery of the final report with recommendations within 3-7 working days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BGV Packages -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our BGV Packages</h2>
+      <p class="section-subtitle">Flexible verification packages designed for different roles and risk levels.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="service-detail-card d-flex flex-column">
+          <div class="icon-circle mx-auto"><i class="fas fa-check"></i></div>
+          <h5 class="fw-bold">Basic Check</h5>
+          <p class="small text-secondary">Essential verification for entry-level and general staff positions.</p>
+          <ul class="list-unstyled small text-start text-secondary mt-2">
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Identity Verification</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Education Check (Highest Degree)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Address Verification (Current)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Reference Check</li>
+          </ul>
+          <div class="mt-auto pt-3">
+            <span class="badge bg-light text-dark">3-5 Days TAT</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-detail-card d-flex flex-column" style="border: 2px solid #0a2c4e;">
+          <div class="badge bg-primary rounded-pill px-3 py-1 mb-3 mx-auto">Most Popular</div>
+          <div class="icon-circle mx-auto"><i class="fas fa-star"></i></div>
+          <h5 class="fw-bold">Standard Check</h5>
+          <p class="small text-secondary">Comprehensive verification for mid-level and professional roles.</p>
+          <ul class="list-unstyled small text-start text-secondary mt-2">
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Identity Verification</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Education Check (All Degrees)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Employment History (Last 2)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Address Verification (Current + Permanent)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Criminal Record Check</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Reference Checks</li>
+          </ul>
+          <div class="mt-auto pt-3">
+            <span class="badge bg-primary">5-7 Days TAT</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-detail-card d-flex flex-column">
+          <div class="icon-circle mx-auto"><i class="fas fa-crown"></i></div>
+          <h5 class="fw-bold">Premium Check</h5>
+          <p class="small text-secondary">In-depth verification for senior leadership and sensitive roles.</p>
+          <ul class="list-unstyled small text-start text-secondary mt-2">
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Standard</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Employment History (All)</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Credit History Check</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Social Media Screening</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Global Database Check</li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>3 Reference Checks</li>
+          </ul>
+          <div class="mt-auto pt-3">
+            <span class="badge bg-light text-dark">7-10 Days TAT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Grid -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Benefits of BGV with JMD Consultancy</h2>
+      <p class="section-subtitle">Why companies trust us for their background verification needs.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-tachometer-alt fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Fast Turnaround</h6>
+          <p class="small text-secondary">Most basic checks completed within 3-5 days. Express verification available for urgent requirements.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-lock fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Data Confidentiality</h6>
+          <p class="small text-secondary">All candidate data and verification reports are handled with strict confidentiality and secure storage.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-globe-asia fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Pan India Coverage</h6>
+          <p class="small text-secondary">Verification capabilities across all Indian states including remote locations and small towns.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-file-pdf fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Digital Reports</h6>
+          <p class="small text-secondary">Detailed, easy-to-read digital verification reports with clear status indicators for each check.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-gavel fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Legal Compliance</h6>
+          <p class="small text-secondary">All checks are conducted in compliance with Indian laws and data protection regulations.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="benefit-card">
+          <i class="fas fa-headset fa-2x mb-3" style="color:#0a2c4e;"></i>
+          <h6 class="fw-bold">Dedicated Support</h6>
+          <p class="small text-secondary">A dedicated verification manager for your account to handle queries and provide updates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-card">
+          <h2 class="section-title text-center mb-4">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  How long does background verification take?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Basic checks typically take 3-5 working days. Standard checks take 5-7 days, and premium checks take 7-10 days. Turnaround time can vary based on the responsiveness of institutions, previous employers, and the candidate's location. We also offer express verification for urgent needs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Is candidate consent required for background checks?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we require written consent from the candidate before initiating any background verification. This is a legal requirement and part of our compliance process. We provide a standard consent form that the candidate must sign.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-2">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What happens if a discrepancy is found?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Our report will clearly highlight the discrepancy with supporting evidence. We categorize findings as "Verified," "Discrepancy Found," or "Unable to Verify." The final hiring decision always rests with you. We provide all information needed to make an informed decision.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-white rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Can you handle bulk verification for multiple candidates?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Absolutely. We regularly handle bulk verification for companies hiring 50-500+ candidates. Our systems are designed for high-volume processing while maintaining accuracy and speed. We can provide a dedicated team for large-scale verification projects.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="cta-section text-center">
+      <h2 class="fw-bold mb-3">Don't Let Hiring Fraud Damage Your Business</h2>
+      <p class="mb-4" style="color: #b6c9e0; font-size: 1.1rem;">Verify your candidates before you hire. Get comprehensive background checks with fast turnaround.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="contact.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold" style="color:#0a2c4e;"><i class="fas fa-shield-alt me-2"></i>Start BGV Today</a>
+        <a href="tel:+918859399891" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold"><i class="fas fa-phone-alt me-2"></i>8859399891</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer pt-5 pb-4">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h4 class="fw-bold text-white">JMD Consultancy</h4>
+        <p class="mt-3" style="color:#b6c9e0;">Trusted HR recruitment and manpower solutions firm committed to connecting the right talent with the right opportunities.</p>
+        <div><i class="fas fa-map-pin me-2"></i> Pan India Recruitment</div>
+        <div><i class="fas fa-phone-alt me-2"></i> 8859399891</div>
+        <div><i class="fas fa-envelope me-2"></i> hr@jmdconsultancy.in</div>
+        <div><i class="fas fa-globe me-2"></i> www.jmdconsultancy.in</div>
+      </div>
+      <div class="col-md-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Our Services</h6>
+        <ul class="list-unstyled">
+          <li><a href="end-to-end-hiring.html">End-to-End Hiring</a></li>
+          <li><a href="hr-process-outsourcing.html">HR Process Outsourcing</a></li>
+          <li><a href="campus-hiring.html">Campus Hiring</a></li>
+          <li><a href="bulk-mass-hiring.html">Bulk / Mass Hiring</a></li>
+          <li><a href="background-verification.html">Background Verification</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h6>Follow</h6>
+        <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      </div>
+    </div>
+    <hr class="mt-4 mb-3" style="border-color:#2a4058;">
+    <div class="row">
+      <div class="col text-center text-md-start">
+        <small>© 2026 JMD Consultancy. All Rights Reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
